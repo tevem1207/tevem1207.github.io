@@ -9,13 +9,7 @@ const nextConfig = {
     },
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'source.unsplash.com',
-        pathname: '/random',
-      },
-    ],
+    unoptimized: true,
   },
 };
 
