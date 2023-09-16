@@ -19,6 +19,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import SupportIcon from "@mui/icons-material/Support";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "dev-taehee",
@@ -113,6 +114,7 @@ export default function RootLayout({
             {children}
           </Box>
         </ThemeRegistry>
+        <Footer></Footer>
       </body>
     </html>
   );
