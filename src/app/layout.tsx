@@ -20,7 +20,7 @@ import SupportIcon from "@mui/icons-material/Support";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 import { Header, Footer } from "@/components";
-import { LayoutProps } from ".next/types/app/layout";
+import { LayoutProps } from "@/types/props";
 
 export const metadata = {
   title: "dev-taehee",
