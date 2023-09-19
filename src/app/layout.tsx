@@ -19,6 +19,8 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import SupportIcon from "@mui/icons-material/Support";
 import LogoutIcon from "@mui/icons-material/Logout";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
+import { Header, Footer } from "@/components";
+import { LayoutProps } from "@/types/props";
 
 export const metadata = {
   title: "dev-taehee",
@@ -31,6 +33,7 @@ const LINKS = [
   { text: "Home", href: "/", icon: HomeIcon },
   { text: "Starred", href: "/starred", icon: StarIcon },
   { text: "Tasks", href: "/tasks", icon: ChecklistIcon },
+  { text: "Docs", href: "/docs", icon: ChecklistIcon },
 ];
 
 const PLACEHOLDER_LINKS = [
@@ -39,25 +42,12 @@ const PLACEHOLDER_LINKS = [
   { text: "Logout", icon: LogoutIcon },
 ];
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <AppBar position="fixed" sx={{ zIndex: 2000 }}>
-            <Toolbar sx={{ backgroundColor: "background.paper" }}>
-              <DashboardIcon
-                sx={{ color: "#444", mr: 2, transform: "translateY(-2px)" }}
-              />
-              <Typography variant="h6" noWrap component="div" color="black">
-                Next.js App Router
-              </Typography>
-            </Toolbar>
-          </AppBar>
+          <Header />
           <Drawer
             sx={{
               width: DRAWER_WIDTH,
@@ -112,6 +102,7 @@ export default function RootLayout({
           >
             {children}
           </Box>
+          <Footer></Footer>
         </ThemeRegistry>
       </body>
     </html>
